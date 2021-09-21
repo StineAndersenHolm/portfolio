@@ -1,0 +1,69 @@
+/*
+ Theme Name:   Astra Child Theme
+ Theme URI:    http://stineholm.dk
+ Description:  Astra Child Theme
+ Author:       Stine Holm
+ Author URI:   http://stineholm.dk
+ Template:     astra
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         Blog, Custom Colors, Custom Logo, Custom Menu, E-Commerce, Editor Style,
+ Entertainment, Featured Images, Full Width Template, Left Sidebar, Microformats, One Column, 
+ Post Formats, Right Sidebar, RTL Language Support, Theme Options, Threaded Comments, 
+ Translation Ready, Two Columns
+ Text Domain:  astrachildtheme
+*/
+
+/*Tekst størrelse på forside*/
+h1.has-text-align-center.has-text-color {
+    font-size: 50px;
+}
+
+/* Ændring af header, så den bliver fixed, samt en hvid baggrundsfarve */
+.ast-primary-header-bar.ast-primary-header.main-header-bar.site-header-focus-item {
+    position: fixed;
+    background-color: rgb(255, 255, 255) !important;
+    width: 100%;
+}
+
+
+/* Menupunkterens farve */
+a.menu-link {
+  color: black !important;
+}
+
+/*Forside billede - slide ind fra siden*/
+.elementor-1230 .elementor-element.elementor-element-0b4498d img {
+    width: 10%;
+    border-radius: 0px !important;
+    animation-duration: 2.5s;
+        animation-name: slidein !important;
+      }
+      
+      @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 90%;
+        }
+      
+        to {
+          margin-left: 0%;
+          width: 90%;
+        }
+      }
+
+  
+/*Hover - tekstfarven bliver sort, når man holder musen over knappen*/
+    .elementor-button.elementor-size-sm:hover{
+      background-color: blanchedalmond;
+      color: black;
+    }
+
+    
+
+
+
+
+      
+
