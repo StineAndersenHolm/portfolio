@@ -15,10 +15,6 @@
  Text Domain:  astrachildtheme
 */
 
-/*Tekst størrelse på forside*/
-h1.has-text-align-center.has-text-color {
-    font-size: 50px;
-}
 
 /* Ændring af header, så den bliver fixed, samt en hvid baggrundsfarve */
 .ast-primary-header-bar.ast-primary-header.main-header-bar.site-header-focus-item {
