@@ -1,65 +1,452 @@
 /*
  Theme Name:   Astra Child Theme
- Theme URI:    http://stineholm.dk
+ Theme URI:    http://truestory.stineholm.dk
  Description:  Astra Child Theme
- Author:       Stine Holm
- Author URI:   http://stineholm.dk
+ Author:       Stine
+ Author URI:   http://truestory.stineholm.dk
  Template:     astra
- Version:      1.0.0
+ Version:      3.1.3
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
- Tags:         Blog, Custom Colors, Custom Logo, Custom Menu, E-Commerce, Editor Style,
- Entertainment, Featured Images, Full Width Template, Left Sidebar, Microformats, One Column, 
- Post Formats, Right Sidebar, RTL Language Support, Theme Options, Threaded Comments, 
- Translation Ready, Two Columns
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  astrachildtheme
 */
 
-
-/* Ændring af header, så den bliver fixed, samt en hvid baggrundsfarve */
-.ast-primary-header-bar.ast-primary-header.main-header-bar.site-header-focus-item {
-    position: fixed;
-    background-color: rgb(255, 255, 255) !important;
-    width: 100%;
+/* Diven for hele quizzen */
+.qsm-quiz-container{
+    text-align: center;
+    margin-top: 100px !important;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 60px 30px 60px 30px;
 }
 
-
-/* Menupunkterens farve */
-a.menu-link {
-  color: black !important;
+/* Baggrundsfarven til quizzen */
+.qsm-quiz-container.qmn_quiz_container.mlw_qmn_quiz.quiz_theme_default {
+    background-color: #e8e5de !important;
 }
 
-/*Forside billede - slide ind fra siden*/
-.elementor-1230 .elementor-element.elementor-element-0b4498d img {
-    width: 10%;
-    border-radius: 0px !important;
-    animation-duration: 2.5s;
-        animation-name: slidein !important;
-      }
-      
-      @keyframes slidein {
-        from {
-          margin-left: 100%;
-          width: 90%;
-        }
-      
-        to {
-          margin-left: 0%;
-          width: 90%;
-        }
-      }
+.qsm-quiz-form{
+ text-align: center;
+}
 
+input{
+    margin-right: 7px !important;
+}
+
+.mlw_qmn_quiz{
+ text-align: center;
+}
+
+.mlw_qmn_quiz_link{
+padding: 50px;
+}
+
+.mlw_qmn_question {
+text-align: center;
+}
+
+.mlw_qmn_timer {
+    background-color: #AA8DB0 !important;
+    display: none;
+    border-radius: 50% !important;
+}
+
+a.qsm-btn.qsm-previous.qmn_btn.mlw_qmn_quiz_link.mlw_previous {
+    display: none !important;
+}
+
+/* Felterne hvor man skal indtaste navne og mail */
+input.mlwRequiredText.qsm_required_text {
+    background-color: #716453 !important;
+    border: none !important;
+    border-radius: 80px !important;
+    color: white !important;
+    text-align: center !important;
+}
+
+/* Godkend div */
+.qsm-pagination.qmn_pagination.border.margin-bottom{
+    margin-bottom: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 25px !important;
   
-/*Hover - tekstfarven bliver sort, når man holder musen over knappen*/
-    .elementor-button.elementor-size-sm:hover{
-      background-color: blanchedalmond;
-      color: black;
+}
+
+.qmn_quiz_container .qmn_btn, .qmn_quiz_container .btn {
+    color: #fff !important;
+    background-color: #AA8DB0 !important;
+    padding: 15px !important;
+}
+
+/* Godkend knap */
+.qmn_quiz_container .qmn_btn, .qmn_quiz_container .btn {
+    color: #fff !important;
+    background-color: #AA8DB0 !important;
+    padding: 15px !important;
+}
+
+/*Fjernet border*/
+.qsm-pagination.qmn_pagination.border.margin-bottom {
+    border: none;
+}
+
+.qsm-before-message.mlw_qmn_message_before {
+    border: none;
+    margin: 0px !important; 
+    padding: 0px !important;
+}
+
+/*Tekst på resultat af quizzen*/
+.tekst_resultat{
+text-align: center;
+font-size: 13px;
+}
+
+/*Tekst - oplevelser der passer til dig*/
+.tekst_resultat2{
+    text-align: center;
+    font-weight: 700px;
+    font-size: 15px;
+    color: black;
+    margin-top: -30px;
     }
 
-    
+/*Billederne på resultat af quizzen*/
+.billede_resultat{
+    width: 50%;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+/*Grid af kartoffel_billede og tekst*/
+.container {
+  display: flex;
+ flex-direction: column;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "kolonne1 kolonne2"
+    ". ."
+    ". .";
+}
+
+.kolonne1 { grid-area: kolonne1; 
+text-align: center;
+width: 100%;
+}
+
+.kolonne2 { grid-area: kolonne2;
+text-align: center;
+width: 100%;
+}
+
+/*Grid af quizzen*/
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    font-family: 'Rajdhani', sans-serif;
+    grid-template-areas:
+        "celle1 celle2 celle3"
+        ". . ."
+        ". . .";
+}
+
+/*Billede 1 på resultat af quizzen*/
+.celle1 {
+    grid-area: celle1;
+    text-align: center;
+    font-size: 10px;
+}
+
+
+/*Billede 2 på resultat af quizzen*/
+.celle2 {
+    grid-area: celle2;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 10px;
+}
+
+/*Billede 3 på resultat af quizzen*/
+.celle3 {
+    margin-top: 20px;
+    text-align: center;
+    grid-area: celle3;
+    font-size: 10px;
+}
+
+/*Billederne på resultat-siden*/
+.billede_resultat{
+    width: 300px; 
+    filter: opacity(60%)drop-shadow(0 0 0 black);
+    background-color: black;
+}
+
+/*Billederne på resultat-siden*/
+.billede_tekst {
+    font-size: 16px;
+    font-weight: 500;
+    font-weight: 800;
+    margin-top: -140px;
+    margin-bottom: 110px !important;
+    color: white;
+    position: relative;
+    font-size: 20px;
+}
+
+.billede_kartoffel {
+    width: 30% !important;
+    margin-bottom: 20px!important;
+}
+
+.billede_kartoffel_pomfrit {
+    width: 20% !important;
+    margin-bottom: 20px!important;
+}
+.quiz-overskrift{
+    color: #716453 !important;
+    font-size: 21px !important;
+}
+
+.tekst_resultat2 {
+    font-size: 17px;
+    font-weight: 600;
+    color: #716453;
+}
+
+.overskrift_resultat{
+    color: #716453 !important;
+}
+
+/*Skriftstørrelse til svarmulighederne*/
+label {
+    font-size: 18px !important;
+    color: black !important;
+}
+
+/*Skriftstørrelse til spørgsmålene*/
+span.mlw_qmn_new_question {
+    font-size: 23px;
+    color: #716453 !important;
+}
+
+ /*Næste Knap*/
+ a.qsm-btn.qsm-next.qmn_btn.mlw_qmn_quiz_link.mlw_next {
+    margin-right:  20px !important;
+    margin-left: 20px !important;
+    padding: 10px !important;
+    border-radius: 50px !important;
+    background-color: #AA8DB0 !important;
+    font-size: 16px !important;
+    font-weight: bold;
+}
 
 
 
+/*----- Ipad version ----*/
+@media only screen and (min-width:700px) {
+  
+ /*----- tekst og kartoffelbillede ----*/
+  .container {
+  display: flex;
+  flex-direction: row;
+}
 
-      
+.kolonne1 { grid-area: kolonne1; 
+width: 50%;
+}
 
+.kolonne2 { grid-area: kolonne2;
+width: 50%;
+}
+  
+  /* resultat tekst til sødkartoffel */
+  .tekst_resultat {
+    margin-left: -20px;
+    margin-right: -30px;
+    font-size: 13px;
+    text-align: center;
+}
+
+    /* Diven for hele quizen */
+.qsm-quiz-container{
+    text-align: center;
+    margin: 100px;
+    background-color: #BEB296 !important;
+    padding: 80px 50px 80px 50px;
+}
+
+    /*Næste Knap*/
+    a.qsm-btn.qsm-next.qmn_btn.mlw_qmn_quiz_link.mlw_next {
+        margin: 0px;
+        padding-right: 49px !important;
+        padding-left: 50px !important;
+    }
+
+    /* Godkend Knap */
+    .qsm-pagination.qmn_pagination.border.margin-bottom{
+        justify-content: center;
+    }
+
+    /*Overskrift til resultat quizzen*/
+    .overskrift_resultat{
+        font-size: 22px !important;
+        color: #716453 !important;
+    }
+
+
+    /*Tekst - oplevelser der passer til dig*/
+.tekst_resultat2{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 15px;
+    }
+
+    /*Billederne på resultat af quizzen*/
+    .billede_resultat{
+        width: 100% !important;
+    }
+    /*Grid resultat af quizzen*/
+    .grid-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /*Billede 1 på resultat af quizzen*/
+    .celle1 {
+        text-align: left;
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    /*Billede 2 på resultat af quizzen*/
+    .celle2 {
+        text-align: left;
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    /*Billede 3 på resultat af quizzen*/
+    .celle3 {
+        margin: 5px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .del_tekst{
+        color: black;
+        font-size: 16px;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .billede_tekst{
+        margin: 0px;
+        margin-top: -65px;
+        margin-bottom: 0px !important;
+        font-size: 11px;
+        text-align: center;
+    }
+  
+  .billede_kartoffel{
+    width: 70% !important;
+    margin-left: 50px;
+  }
+  
+  .billede_kartoffel_pomfrit {
+    width: 50% !important;
+    margin-bottom: 20px!important;
+}
+}
+
+/*----- Computer version ----*/
+@media only screen and (min-width:900px) {
+  
+  .tekst_resultat1 {
+    margin-top: -170px;
+    margin-right: -10px;
+    margin-left: 70px;
+}
+
+/*----- Overskrift til quizzen ----*/
+.quiz-overskrift{
+    font-weight: 900 !important;
+    font-size: 40px !important;
+}
+
+/*----- div quiz ----*/
+.qsm-quiz-container.qmn_quiz_container.mlw_qmn_quiz.quiz_theme_default {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-left: 200px !important;
+    margin-right: 200px!important;
+}
+
+/*----- billede_tekst til resultaterne ----*/
+.billede_tekst{
+margin-top: -85px;
+margin-bottom: 50px !important;
+}
+
+input{
+    margin:10px !important;
+    border: none !important;
+}
+
+input.mlwRequiredText.qsm_required_text{
+    padding: 10px 40px 10px 40px;
+}
+  
+  /*----- tekst til resultatet ----*/
+.tekst_resultat {
+    margin-left: -20px!important;
+    margin-right: -30px!important;
+    font-size: 13px!important;
+    margin-bottom: 20px!important;
+  }
+  
+  /*----- kartoffelbillede ----*/
+  .billede_kartoffel {
+    width: 70% !important;
+}
+}
+
+/*----- Stor computer version ----*/
+@media only screen and (min-width:1100px) {
+.tekst_resultat {
+  width: 400px;
+    font-size: 15px !important;
+  margin-left: 20px !important;
+  }
+
+  
+.billede_kartoffel {
+    width: 42% !important;
+   margin-right: -30px;
+}
+  
+  .billede_kartoffel_pomfrit {
+    width: 30% !important;
+    margin-right: -30px;
+}
+  
+.overskrift_resultat {
+  margin-left: 20px;
+    font-size: 25px !important;
+  width: 400px;
+  margin-top: 10px;
+}
+  
+  .billede_tekst {
+    font-size: 14px;
+    margin-top: -100px;
+}
+}
